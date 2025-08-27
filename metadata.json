@@ -1,0 +1,8 @@
+{
+  "name": "Copy of Copy of Copy of Copy of Copy of Copy of Copy of Copy of Construction Estimating Assistant",
+  "description": "An AI-powered assistant that takes OCR text from construction plans and generates estimates, bid proposals, and email replies using the Gemini API.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

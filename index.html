@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Construction Suite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                DEFAULT: 'hsl(45, 95%, 50%)', // Construction Yellow
+                light: 'hsl(45, 95%, 95%)',
+                dark: 'hsl(45, 95%, 45%)',
+              },
+              background: 'hsl(240, 20%, 8%)', // Dark Navy
+              card: 'hsl(240, 20%, 12%)',       // Slightly lighter Navy for cards
+              text: {
+                DEFAULT: 'hsl(210, 20%, 95%)', // Off-white
+                muted: 'hsl(210, 15%, 60%)',   // Gray
+                dark: 'hsl(220, 15%, 15%)',    // For text on light/yellow backgrounds
+              },
+              border: 'hsl(240, 20%, 25%)',
+              accent: 'hsl(220, 90%, 60%)',    // Bright Blue
+              secondary: 'hsl(260, 90%, 65%)', // Vibrant Purple
+              overview: 'hsl(220, 10%, 70%)',  // Brighter Gray for dark theme
+              precon: 'hsl(210, 80%, 65%)',    // Brighter Blue for dark theme
+              con: 'hsl(30, 90%, 60%)',         // Brighter Orange for dark theme
+              closeout: 'hsl(145, 63%, 52%)',  // Brighter Green for dark theme
+              'tm-orange': {
+                DEFAULT: '#f97316', // orange-500
+                dark: '#ea580c', // orange-600
+              },
+              'tm-alert': {
+                bg: '#fef3c7', // amber-100
+                border: '#f59e0b', // amber-500
+                icon: '#d97706' // amber-600
+              },
+              'tm-gray': {
+                '50': '#f9fafb',
+                '100': '#f3f4f6',
+                '200': '#e5e7eb',
+                '300': '#d1d5db',
+                '600': '#4b5563',
+                '800': '#1f2937'
+              }
+            },
+            fontFamily: {
+              sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', '"Helvetica Neue"', 'Arial', 'sans-serif'],
+            },
+            borderRadius: {
+              'lg': '0.5rem',
+              'xl': '0.75rem',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.15.0"
+  }
+}
+</script>
+<style>
+  body {
+    background-color: hsl(240, 20%, 8%);
+    background-image: radial-gradient(circle at 1px 1px, hsl(240, 20%, 25%) 1px, transparent 0);
+    background-size: 20px 20px;
+  }
+  .simple-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  .simple-scrollbar::-webkit-scrollbar-thumb {
+    background-color: hsl(210, 15%, 40%);
+    border-radius: 3px;
+  }
+  .simple-scrollbar::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+  [contenteditable][data-placeholder]:empty:before {
+    content: attr(data-placeholder);
+    color: #a0aec0; /* Tailwind gray-400 */
+    pointer-events: none;
+    display: block;
+  }
+</style>
+</head>
+  <body class="bg-background text-text">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
